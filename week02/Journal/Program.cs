@@ -1,5 +1,5 @@
 using System;
-
+// It runs the journal program and handles the menu options.
 class Program
 
 {
@@ -13,7 +13,7 @@ class Program
         PromptGenerator promptGenerator = new PromptGenerator();
 
         string choice = "";
-
+// Keeps the program running until the user quits.
         while (choice != "5")
 
         {
@@ -37,7 +37,7 @@ class Program
             if (choice == "1")
 
             {
-
+// Gets a random prompt and creates a new entry.
                 string prompt = promptGenerator.GetRandomPrompt();
 
                 Console.WriteLine(prompt);

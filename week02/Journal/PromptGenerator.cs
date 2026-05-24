@@ -1,5 +1,5 @@
 using System;
-
+// Stores journal prompts and returns one at random.
 public class PromptGenerator
 {
     private List<string> _prompts = new List<string>
@@ -38,6 +38,7 @@ public class PromptGenerator
 
     "What scripture would I like to study more deeply?"
     };
+    // Picks a random prompt from the list.
      public string GetRandomPrompt()
 
     {

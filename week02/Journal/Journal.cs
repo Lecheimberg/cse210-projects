@@ -1,10 +1,11 @@
 using System.Text;
-
+// Handles storing, saving, loading, and displaying entries.
 public class Journal
 
 {
 
     private List<Entry> _entries = new List<Entry>();
+// Adds a new entry to the journal.
 
     public void AddEntry(Entry newEntry)
 
@@ -13,7 +14,7 @@ public class Journal
         _entries.Add(newEntry);
 
     }
-
+// Displays every journal entry.
     public void DisplayAll()
 
     {
@@ -27,7 +28,7 @@ public class Journal
         }
 
     }
-
+ // Saves entries into a text file.
     public void SaveToFile(string file)
 
     {
@@ -51,7 +52,7 @@ public class Journal
         Console.WriteLine("Journal saved successfully.");
 
     }
-
+// Loads entries from a saved file.
     public void LoadFromFile(string file)
 
     {
@@ -71,6 +72,7 @@ public class Journal
         foreach (string line in lines)
 
         {
+            // Skips the header lines in the file.
             if (line.StartsWith("Saved On:") || line.StartsWith("---"))
 
         {
